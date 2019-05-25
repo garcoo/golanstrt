@@ -17,7 +17,7 @@ func ContactChatWork(w rest.ResponseWriter, req *rest.Request) {
 		return
 	}
 
-	w.WriteJson(&domain.CallChatMessageId{
+	w.WriteJson(
 		application.ContactBot(input),
-	})
+	)
 }

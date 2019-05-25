@@ -7,10 +7,10 @@ type ChatWorkRequest struct {
 		Account_id  int32
 		Body        string
 		Send_time   int32
-		Update_time string
+		Update_time int32
 	}
 }
 
-type CallChatMessageId struct {
+type CallChatWorkResponse struct {
 	Message_id string
 }
