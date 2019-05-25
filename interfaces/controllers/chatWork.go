@@ -17,11 +17,7 @@ func ContactChatWork(w rest.ResponseWriter, req *rest.Request) {
 		return
 	}
 
-	if input.Webhook_event.Account_id == "" {
-		rest.Error(w, "Name is required", 400)
-	}
-
-	w.WriteJson(&domain.CallChatMessageId{
+	w.WriteJson(
 		application.ContactBot(input),
-	})
+	)
 }
